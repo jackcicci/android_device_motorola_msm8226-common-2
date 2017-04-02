@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2016 The CyanogenMod Project
  * Copyright (c) 2017 The LineageOS Project
@@ -22,39 +23,10 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
 
-import cyanogenmod.preference.RemotePreferenceUpdater;
-
-public class CMActionsReceiver extends RemotePreferenceUpdater {
+public class CMActionsReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "CMActions";
 
     private static final String DOZE_KEY = "doze_device_settings";
-
-    @Override
-    public void onReceive(final Context context, Intent intent) {
-        super.onReceive(context, intent);
-        if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            if (DEBUG) Log.d(TAG, "Starting service");
-            context.startService(new Intent(context, CMActionsService.class));
-        }
-    }
-
-    @Override
-    public String getSummary(Context context, String key) {
-        if (DOZE_KEY.equals(key)) {
-            boolean enabled = Settings.Secure.getInt(context.getContentResolver(),
-                Settings.Secure.DOZE_ENABLED, 1) != 0;
-            if (enabled) {
-                return context.getString(R.string.ambient_display_summary_on);
-            } else {
-                return context.getString(R.string.ambient_display_summary_off);
-            }
-        }
-        return null;
-    }
-
-    public static void notifyChanged(Context context) {
-        notifyChanged(context, DOZE_KEY);
-    }
 }
