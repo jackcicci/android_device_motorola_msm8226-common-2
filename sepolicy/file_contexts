@@ -72,9 +72,3 @@
 /sys/devices/f9925000.i2c/i2c-3/3-0048/temp1_input          u:object_r:sysfs_thermal:s0
 /sys/devices/f9925000.i2c/i2c-3/3-0048/temp1_max            u:object_r:sysfs_thermal:s0
 /sys/devices/f9925000.i2c/i2c-3/3-0048/temp1_max_hyst       u:object_r:sysfs_thermal:s0
-
-# Power
-/sys/power/autosleep                                        u:object_r:sysfs_power:s0
-
-# Light
-/sys/devices/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\..*/leds/lcd-backlight/brightness    u:object_r:sysfs_light:s0
