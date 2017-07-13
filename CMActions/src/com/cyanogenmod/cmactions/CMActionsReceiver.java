@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2016 The CyanogenMod Project
  * Copyright (c) 2017 The LineageOS Project
@@ -24,10 +25,12 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 
-import cyanogenmod.preference.RemotePreferenceUpdater;
+public class CMActionsReceiver {
 
-public class CMActionsReceiver extends RemotePreferenceUpdater {
+    private static final boolean DEBUG = false;
+    private static final String TAG = "CMActions";
 
+    private static final String DOZE_KEY = "doze_device_settings";
     @Override
     public void onReceive(final Context context, Intent intent) {
         super.onReceive(context, intent);

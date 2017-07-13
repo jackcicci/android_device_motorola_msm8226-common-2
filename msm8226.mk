@@ -53,6 +53,17 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
+# Use specific resolution for bootanimation
+SMALL_BOOTANIMATION_SIZE := 720x720
+
+# charge_only_mode
+PRODUCT_COPY_FILES += \
+    device/motorola/msm8226-common/charge_only_mode/charge_only_mode:system/bin/charge_only_mode
+
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    device/motorola/msm8226-common/bluetooth/libbt-vendor.so:system/vendor/lib/libbt-vendor.so 
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # ANT+
