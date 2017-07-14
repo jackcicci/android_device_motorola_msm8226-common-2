@@ -419,8 +419,8 @@
     <!-- Whether to enable HumanInteractionController by default 
     <bool name="config_HICEnabledDefault">false</bool> -->
 
-    <!-- Configuration to support SIM contact batch operation -->
-    <bool name="config_sim_phonebook_batch_operation">false</bool>
+    <!-- Configuration to support SIM contact batch operation 
+    <bool name="config_sim_phonebook_batch_operation">false</bool> -->
 
     <!-- Enable NightLight -->
     <bool name="config_nightDisplayAvailable">true</bool>
