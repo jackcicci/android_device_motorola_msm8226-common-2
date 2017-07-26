@@ -48,10 +48,18 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
 
-#Use UBERTC
+# Use UBERTC
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 TARGET_GCC_VERSION_EXP := 4.9-uber
+
+# Optimization
+CLANG_O3 := true
+STRICT_ALIASING := false
+KRAIT_TUNINGS := true
+GRAPHITE_OPTS := false
+ENABLE_GCCONLY := false
+USE_PIPE := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
