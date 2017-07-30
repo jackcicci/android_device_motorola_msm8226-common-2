@@ -48,9 +48,16 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+LOCAL_SDCLANG := true
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+
 # Use UBERTC
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9-uber/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
+ANDROID_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9-uber/bin
+ANDROID_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Optimization
