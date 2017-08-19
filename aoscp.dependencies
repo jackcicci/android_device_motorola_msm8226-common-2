@@ -1,0 +1,14 @@
+[
+  {
+    "repository":  "kernel_motorola_msm8226",
+    "target_path": "kernel/motorola/msm8226",
+	"branch":      "nougat-mr2",
+	"remote":      "aoscp"
+  },
+  {
+    "repository":  "device_qcom_common",
+    "target_path": "device/qcom/common",
+	"branch":      "nougat-mr2",
+	"remote":      "aoscp"
+  }
+]
