@@ -31,7 +31,7 @@ SDCLANG := true
 TARGET_USE_SDCLANG := true
 LOCAL_SDCLANG := true
 SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
-SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+SDCLANG_LTO_DEFS := device/qcom/common/sdclang/sdllvm-lto-defs.mk
 
 # Architecture
 TARGET_ARCH := arm
