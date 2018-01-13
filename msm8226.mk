@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
-    Snap
+    FootejCamera
 
 # DRM
 PRODUCT_PACKAGES += \
