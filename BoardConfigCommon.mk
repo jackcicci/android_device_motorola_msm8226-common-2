@@ -48,7 +48,8 @@ BOARD_KERNEL_CMDLINE := androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=q
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
 
@@ -111,9 +112,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Properties
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
-
-# Qualcomm support
-BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 BOARD_NO_SECURE_DISCARD := true
