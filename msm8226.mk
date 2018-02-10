@@ -57,6 +57,8 @@ TARGET_SCREEN_WIDTH := 720
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+$(call inherit-product-if-exists, vendor/prebuilt/config.mk)
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -100,7 +102,7 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
-    Snap
+    FootejCamera
 
 # DRM
 PRODUCT_PACKAGES += \
